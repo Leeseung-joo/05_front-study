@@ -13,8 +13,58 @@
     2. Document.prototype.createTextNode(text)   : 인자로 전달받은 텍스트 값으로 텍스트 노드 생성 후 반환 
     3. Node.prototype.appendChild(childNode)     : 인자로 전달받은 노드를 appendChild를 호출한 노드의 마지막 자식 노드로 추가
   -->
+  <h2>동적으로 노드 생성 및 추가</h2>
+  <div id = "drink">
+  <h4>커피</h4>
+</div>
+
+<button onclick = "createNode1();">클릭</button>
+
+<script>  //잘 안쓰임
+  function createNode1(){
+    //<h4>콜라<h4>, <h4>우유<h4> 요소를 #drink 자식 노드로 추가하기
+
+      //요소 노드 객체 생성
+      const cokeH4 = document.createElement('h4'); //<h4><h4>
+      
+      const cokeText = document.createTextNode('콜라'); //콜라를 h4요소 노드객체에 자손으로 넣어줄거임
+        //결합 == 텍스트 노드를 요소 노드의 자식으로 추가
+
+      cokeh4.appendChild(cokeText);
+      //완성된 요소 노드를 #drink 자식 노드로 추가
+      document.getElementById('drink').appendChild(cokeH4);  
 
 
+
+
+
+      //2)
+      //요소 노드 객체 생성
+      const milkh4 = document.createElement('h4')
+      //요소 노드의 textContent 프로퍼티에 값 할당
+      milkh4.textContent = '우유'; //<h4>우유<h4>
+        //완성된 요소 노드를 #drinkt자식 노드로 추가
+      document.getElementById.('drink').appendChild(milk4);
+  }
+</script>
+
+<h2>텍스트 노드를 가지지 않는 요소 노드 생성 및 추가</h2>
+
+<div id = "img_container"></div>
+
+<button onClick = "createNode2();">클릭</button>
+
+<script>
+  function createNode2(){
+
+    const imgEl = document.createElement('img'); //<img>
+    imgEl.src = '../../assets/image/flower1.jpg' //<img src = "">
+    imgEl.width = 200; 
+
+    document.getElementById('img_container').appendChild(imgEl);
+  }
+  
+</script>
 
   <!-- 
     ## 노드 복사, 교체, 삭제 ##
@@ -34,6 +84,23 @@
     4. Element.prototype.remove()
         → 호출한 노드를 DOM에서 제거
   -->
+
+  <h2>노드 복사</h2>
+  <ul id = "copy">
+    <li>li 요소</li>
+  </ul>
+
+  <button onclick="copyNode();">클릭</button>
+
+  <script>
+    function copyNode(){
+
+     const shallowClone = document.getElementById('copy').cloneNode(); //얕은 복사
+
+     const deepClone = document.getELementById('copy').columnNode(true);
+     console.log(deepClone);
+    }
+  </script>
 
 </body>
 </html>

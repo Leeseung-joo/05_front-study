@@ -211,3 +211,17 @@ console.log(months);
   
 */
 
+const numbers = [30,21,101,18,1,201,20];
+console.log(`정렬 전 numbers:${numbers}`);
+numbers.sort(); //숫자가 내부적으로 문자열로 변환되서 유니코드 순서로 정렬됨
+
+numbers.sort((left, right) => left -right);
+numbers.sort((right, left) => right -left); //내림차순
+
+
+
+const lectures = ['Java', 'MySQL'];
+lectures.map(element => '과목 ' + element);
+const datas = [true, 1, 'text', {}, []] //배열이 요소들의 타입을 모아둔 새로운 배열
+datas.map(item=> typeof item)
+   .forEach(item=>console.log(item));

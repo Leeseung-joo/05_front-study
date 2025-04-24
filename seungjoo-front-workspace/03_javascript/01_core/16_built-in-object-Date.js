@@ -56,3 +56,9 @@
   11. Date.prototype.toXXXString
       → 사람이 읽을 수 있는 형식의 문자열로 Date 객체의 날짜 반환 
 */
+//현재 날짜 및 시간
+console.log(new Date());
+console.log(new Date(0));
+
+
+

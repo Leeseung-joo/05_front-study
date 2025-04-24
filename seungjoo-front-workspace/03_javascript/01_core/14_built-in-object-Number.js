@@ -90,3 +90,14 @@ console.log(Number.isNaN(NaN));
 console.log(Number.isNaN(undefined));       
 
 
+//getTotal()함수 구현하기
+const getTotal = (arr) => {
+   let total = 0;
+   arr.forEach(item =>{
+      console.log(item/1);
+});
+return total;
+}
+
+const array = ['hello', 'world', 10,20,30.23,'40'];
+console.log(getTotal(array));

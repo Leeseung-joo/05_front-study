@@ -91,3 +91,10 @@
       → 한쪽 끝의 공백만 제거하려면 trimStart() 나 trimEnd() 를 사용
 */
 
+//실습
+const yesCheck = (str) => {
+    str.toLowerCase().trim().replaceAll('','');
+    chageStr ==='yes'|| changeStr === 'y';
+};
+
+const testArr = ['yes', 'Yes', 'yEs', 'y']
